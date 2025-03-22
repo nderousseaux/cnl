@@ -7,71 +7,82 @@ import { ArrowRightIcon, EnvelopeIcon } from '@heroicons/react/24/outline';
 export default function Page() {
   const data = [
     {
-      name: "Nohann Derousseaux--Lebert",
-      poste: "CEO",
+      name: "Nohann",
+      poste: "Directeur",
       image: "/assets/team/1.jpeg",
     },
     {
-      name: "Cédric Derousseaux",
-      poste: "CTO",
+      name: "Clara",
+      poste: "Marketing",
       image: "/assets/team/2.jpeg",
     },
     {
-      name: "Léa Derousseaux",
-      poste: "COO",
+      name: "Lola",
+      poste: "Commercial",
       image: "/assets/team/3.jpeg",
     },
     {
-      name: "Louis Remy",
-      poste: "CFO",
+      name: "Lucas",
+      poste: "Comptabilité",
+      image: "/assets/team/10.jpeg",
+    },
+    {
+      name: "Emma",
+      poste: "IoT",
       image: "/assets/team/4.jpeg",
     },
     {
-      name: "Alice Martin",
-      poste: "CMO",
+      name: "Marie",
+      poste: "IA embarquée",
       image: "/assets/team/5.jpeg",
     },
     {
-      name: "Julien Dupont",
-      poste: "Lead Developer",
+      name: "Julie",
+      poste: "Big Data",
       image: "/assets/team/6.jpeg",
     },
     {
-      name: "Sophie Lambert",
-      poste: "Product Manager",
+      name: "Sophie",
+      poste: "DevOps",
       image: "/assets/team/7.jpeg",
     },
     {
-      name: "Marc Durand",
-      poste: "UX Designer",
+      name: "Marc",
+      poste: "Support",
       image: "/assets/team/8.jpeg",
     },
     {
-      name: "Emma Petit",
-      poste: "Data Scientist",
+      name: "Louisa",
+      poste: "Électronique",
       image: "/assets/team/9.jpeg",
-    },
-    {
-      name: "Lucas Moreau",
-      poste: "DevOps Engineer",
-      image: "/assets/team/10.jpeg",
-    },
+    }
   ]
 
   
   return (
     <main className="flex justify-center h-screen font-sans">
       
-      <div className="w-full max-w-6xl p-4 flex flex-col">
-        <h1 className="text-4xl font-bold mb-8 text-center">Notre équipe</h1>
-        <p className="text-lg mb-12 text-center max-w-3xl mx-auto">Nous avons le plaisir de vous présenter notre équipe, composée de professionnels passionnés et engagés. Chaque membre de notre équipe apporte son expertise et son savoir-faire pour vous offrir des produits et services de qualité. Découvrez les visages qui se cachent derrière CNL.</p>
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
+      <div className="w-full flex flex-col">
+        <section className="col-span-2 row-span-2 bg-gray-100 p-6 rounded-3xl flex flex-col justify-between mb-4">
+          <h2 className={`text-7xl font-bold ${emphasisFont.className} tracking-tighter mb-4`}>Notre équipe</h2>
+          <p className="text-lg">
+          Nous avons le plaisir de vous présenter notre équipe, composée de professionnels passionnés et engagés. Chaque membre de notre équipe apporte son expertise et son savoir-faire pour vous offrir des produits et services de qualité. Découvrez les visages qui se cachent derrière CNL. 
+          Notre équipe se compose de 10 membres, chacun ayant un rôle clé dans le développement et la réussite de notre entreprise. Découvrez les visages qui se cachent derrière CNL.
+          </p>
+        </section>
+        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4 w-full pb-4">
           {data.map((member, index) => (
-            <div key={index} className="flex flex-col items-center">
-              <Image src={member.image} alt={member.name} width={150} height={150} className="rounded-full mb-4" />
-              <h2 className="text-xl font-semibold">{member.name}</h2>
-              <p className="text-gray-600">{member.poste}</p>
-            </div>
+            <section className="col-span-1 row-span-1 bg-gray-200 p-2 rounded-3xl flex flex-col justify-end relative aspect-[3/4]" key={index}>
+              <Image
+              src={member.image}
+              alt={member.name}
+              layout="fill"
+              objectFit="cover"
+              className="rounded-3xl"
+              />
+                <h2 className={`text-4xl md:text-6xl font-bold ${emphasisFont.className} relative z-10 text-white`}>{member.name}</h2>
+                <h2 className={`text-xl md:text-3xl font-bold ${emphasisFont.className} relative z-10 text-white`}>#{member.poste}</h2>
+            </section>
           ))}
         </div>
       </div>
