@@ -9,7 +9,7 @@ export default function Page() {
     {
       icon: <ShieldCheckIcon className="w-10 h-10" />,
       title: "Bien être animal",
-      description: "Nous plaçons le bien-être de l'animal au coeur de chaque décision et de chaque produit que nous développons."
+      description: "Nous plaçons le bien-être de l&apos;animal au coeur de chaque décision et de chaque produit que nous développons."
     },
     {
       icon: <GlobeAltIcon className="w-10 h-10" />,
@@ -34,7 +34,7 @@ export default function Page() {
     {
       icon: <ArchiveBoxArrowDownIcon className="w-10 h-10" />,
       title: "Accessibilité pour tous",
-      description: "Nous nous efforçons de rendre nos produits accessibles au plus grand nombre de propriétaires d'animaux."
+      description: "Nous nous efforçons de rendre nos produits accessibles au plus grand nombre de propriétaires d&apos;animaux."
     }
   ]
 
@@ -44,7 +44,7 @@ export default function Page() {
         <section className="col-span-2 row-span-2 bg-gray-100 p-6 rounded-3xl flex flex-col justify-between mb-4">
           <h2 className={`text-7xl font-bold ${emphasisFont.className} tracking-tighter mb-4`}>Nos valeurs</h2>
           <p className="text-lg">
-          Chez nous, l'innovation, l'intégrité et la collaboration sont au cœur de tout ce que nous faisons. Nous croyons fermement que chaque défi est une opportunité de croissance et d'apprentissage. Notre équipe est dédiée à fournir des solutions de haute qualité tout en respectant les normes éthiques les plus élevées. Ensemble, nous travaillons pour créer un impact positif et durable dans notre communauté et au-delà.
+          Chez nous, l&apos;innovation, l&apos;intégrité et la collaboration sont au cœur de tout ce que nous faisons. Nous croyons fermement que chaque défi est une opportunité de croissance et d&apos;apprentissage. Notre équipe est dédiée à fournir des solutions de haute qualité tout en respectant les normes éthiques les plus élevées. Ensemble, nous travaillons pour créer un impact positif et durable dans notre communauté et au-delà.
           </p>
         </section>
         <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4 w-full pb-4">
@@ -69,7 +69,7 @@ export default function Page() {
               Chaque année, nous consacrons 5% de nos bénéfices à des associations de protection animale et des initiatives environnementales. Nous croyons fermement que notre responsabilité va au-delà de nos produits.
             </p>
             <p className="text-lg">
-              Notre équipe participe régulièrment à des actions de bénévolat dans des refuges et des centres de sauvetage d'animaux. C'est notre façon de rester connectés à notre mission première : améliorer la vie des animaux.
+              Notre équipe participe régulièrment à des actions de bénévolat dans des refuges et des centres de sauvetage d&apos;animaux. C&apos;est notre façon de rester connectés à notre mission première : améliorer la vie des animaux.
             </p>
             <div className="h-full"/>
 

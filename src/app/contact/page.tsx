@@ -1,8 +1,5 @@
-import Image from 'next/image';
-import Link from 'next/link';
-
 import { emphasisFont } from '@/src/ui/fonts';
-import { ArrowRightIcon, EnvelopeIcon, GlobeAltIcon, ShieldCheckIcon, ChartBarIcon, ArchiveBoxArrowDownIcon } from '@heroicons/react/24/outline';
+import { ArrowRightIcon, EnvelopeIcon, ArchiveBoxArrowDownIcon } from '@heroicons/react/24/outline';
 
 export default function Page() {
   return (
@@ -39,7 +36,7 @@ export default function Page() {
               Email
             </h2>
             <p className="text-lg text-center">
-              Envoyez nous un email à l'adresse suivante : <a href="mailto:nohann.derousseauxlebert@gmail.com" className="underline">
+              Envoyez nous un email à l&apos;adresse suivante : <a href="mailto:nohann.derousseauxlebert@gmail.com" className="underline">
               nohann.derousseauxlebert@gmail.com
               </a> 
             </p>

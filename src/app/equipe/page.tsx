@@ -1,8 +1,6 @@
 import Image from 'next/image';
-import Link from 'next/link';
 
 import { emphasisFont } from '@/src/ui/fonts';
-import { ArrowRightIcon, EnvelopeIcon } from '@heroicons/react/24/outline';
 
 export default function Page() {
   const data = [

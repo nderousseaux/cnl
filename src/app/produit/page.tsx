@@ -2,24 +2,24 @@ import Image from 'next/image';
 import Link from 'next/link';
 
 import { emphasisFont } from '@/src/ui/fonts';
-import { ArrowRightIcon, EnvelopeIcon } from '@heroicons/react/24/outline';
+import { ArrowRightIcon } from '@heroicons/react/24/outline';
 
 export default function Page() {
   const data = [
     {
       title: "Un collier à la pointe de la technologie",
       image: "/assets/collar.jpg",
-      description: "Le collier CNL est équipé des dernières technologies. Grâce à des capteurs biométriques, il permet de suivre en temps réel la santé de votre animal. Les capteurs de fréquence cardiaque, de température et de respiration permettent de détecter les moindres changements et d'alerter en cas de problème."
+      description: "Le collier CNL est équipé des dernières technologies. Grâce à des capteurs biométriques, il permet de suivre en temps réel la santé de votre animal. Les capteurs de fréquence cardiaque, de température et de respiration permettent de détecter les moindres changements et d&apos;alerter en cas de problème."
     },
     {
       title: "Une caméra intelligente",
       image: "/assets/camera.jpg",
-      description: "La caméra intelligente du collier CNL permet de surveiller votre animal à distance. Grâce à la vision HD/IR et à l'analyse comportementale par l'IA, vous pouvez suivre en temps réel les activités et le comportement de votre animal. L'IA permet de détecter les comportements anormaux et de vous alerter en cas de problème."
+      description: "La caméra intelligente du collier CNL permet de surveiller votre animal à distance. Grâce à la vision HD/IR et à l&apos;analyse comportementale par l&apos;IA, vous pouvez suivre en temps réel les activités et le comportement de votre animal. L&apos;IA permet de détecter les comportements anormaux et de vous alerter en cas de problème."
     },
     {
       title: "Une application mobile pour un suivi personnalisé",
       image: "/assets/phone.jpg",
-      description: "Avec l'application mobile, vous pouvez suivre les données de votre animal et recevoir des alertes en cas de problème. Vous pouvez consulter l'historique des données et les tendances pour mieux comprendre le comportement de votre animal. L'application vous permet de personnaliser les alertes et les notifications en fonction des besoins"
+      description: "Avec l&apos;application mobile, vous pouvez suivre les données de votre animal et recevoir des alertes en cas de problème. Vous pouvez consulter l&apos;historique des données et les tendances pour mieux comprendre le comportement de votre animal. L&apos;application vous permet de personnaliser les alertes et les notifications en fonction des besoins"
     }
   ]
 
@@ -45,7 +45,7 @@ export default function Page() {
               
                 <p className="text-3xl font-bold">34.99€ / mois</p>
               
-                <p className="leading-relaxed">Le collier CNL est un collier connecté qui permet de suivre en temps réel la santé et le comportement de votre animal de compagnie. Il est doté d'une caméra intelligente qui vous permet de surveiller votre animal à distance. Avec l'application mobile, vous pouvez suivre les données de votre animal et recevoir des alertes en cas de problème, et ce, où que vous soyez. Avec le collier CNL, vous bénéficiez d'un suivi personnalisé pour assurer le bien-être de votre animal.</p>
+                <p className="leading-relaxed">Le collier CNL est un collier connecté qui permet de suivre en temps réel la santé et le comportement de votre animal de compagnie. Il est doté d&apos;une caméra intelligente qui vous permet de surveiller votre animal à distance. Avec l&apos;application mobile, vous pouvez suivre les données de votre animal et recevoir des alertes en cas de problème, et ce, où que vous soyez. Avec le collier CNL, vous bénéficiez d&apos;un suivi personnalisé pour assurer le bien-être de votre animal.</p>
               <ul className="list-disc list-inside space-y-2">
                 <li> Suivi de la santé de votre animal</li>
                 <li> Analyse de son comportement et de son activité</li>
