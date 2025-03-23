@@ -29,13 +29,14 @@ export default function Card({ id, className, title, image, description }: CardP
 			{ threshold: 0.5 }
 		);
 
-		if (cardRef.current) {
-			observer.observe(cardRef.current);
+		const currentCardRef = cardRef.current;
+		if (currentCardRef) {
+			observer.observe(currentCardRef);
 		}
 
 		return () => {
-			if (cardRef.current) {
-				observer.unobserve(cardRef.current);
+			if (currentCardRef) {
+				observer.unobserve(currentCardRef);
 			}
 		};
 	}, []);

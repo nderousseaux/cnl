@@ -2,7 +2,7 @@ import React, { useRef } from "react";
 import { useGLTF } from "@react-three/drei";
 
 interface ModelProps {
-  [key: string]: any;
+  [key: string]: unknown;
 }
 
 export default function Model(props: ModelProps) {
