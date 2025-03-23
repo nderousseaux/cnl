@@ -25,7 +25,7 @@ export default function Page() {
 
   
   return (
-    <main className="flex justify-center h-screen font-sans">
+    <main className="flex justify-center font-sans">
       <div className="text-center p-16">
 
         <section className="flex gap-10">

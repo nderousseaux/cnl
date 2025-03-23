@@ -23,7 +23,7 @@ export default function Nav() {
 	];
 
 	return (
-		<nav className="border-2 border-gray-300 h-20 rounded-3xl flex justify-between items-center px-4 mb-4 relative">
+		<nav className="border-2 border-gray-300 h-20 rounded-3xl flex justify-between items-center px-4 relative">
 			{/* logo left */}
 			<div>
 				<Logo />

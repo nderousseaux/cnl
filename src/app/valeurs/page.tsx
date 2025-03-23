@@ -39,7 +39,7 @@ export default function Page() {
   ]
 
   return (
-    <main className="flex justify-center h-screen font-sans">
+    <main className="flex justify-center font-sans">
       <div className="w-full flex flex-col">
         <section className="col-span-2 row-span-2 bg-gray-100 p-6 rounded-3xl flex flex-col justify-between mb-4">
           <h2 className={`text-7xl font-bold ${emphasisFont.className} tracking-tighter mb-4`}>Nos valeurs</h2>
