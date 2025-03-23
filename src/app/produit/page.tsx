@@ -5,8 +5,9 @@ import { ShoppingBagIcon } from '@heroicons/react/24/outline';
 import { Canvas, useFrame } from "@react-three/fiber";
 import { Environment, OrbitControls } from "@react-three/drei";
 import { Suspense, useRef, useEffect, useState } from "react";
-import Model from "@/src/ui/components/model";
+import { motion } from 'motion/react';
 
+import Model from "@/src/ui/components/model";
 import { emphasisFont } from '@/src/ui/fonts';
 import Button from '@/src/ui/components/button';
 import { arguments_product } from '@/src/lib/data';
@@ -43,7 +44,12 @@ export default function Page() {
           </div>
 
           {/* Right part, the title, desc, and price */} 
-          <div className="flex flex-col gap-10 text-left text-xl justify-between pb-4 align-bottom col-span-1">
+          <motion.div className="flex flex-col gap-10 text-left text-xl justify-between pb-4 align-bottom col-span-1"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5 }}
+          >
+            
             <div className="flex flex-col gap-6">
               <h2 className={`text-6xl md:text-7xl 2xl:text-8xl font-bold ${emphasisFont.className} tracking-tighter`}>
                 Le collier CNL
@@ -61,7 +67,7 @@ export default function Page() {
             </div>
             
             <Button href="/buy" text="Acheter" Icon={ShoppingBagIcon} />
-          </div>
+          </motion.div>
         </section>
 
         <section className="flex flex-col gap-10 xl:mx-28 mb-10">
@@ -70,7 +76,7 @@ export default function Page() {
           </h2>
           <div className="flex flex-col gap-10 ">
             {arguments_product.map((item, index) => (
-                <Card id={index} {...item} />
+              <Card key={index} id={index} {...item} />
             ))}
           </div>
         </section>
