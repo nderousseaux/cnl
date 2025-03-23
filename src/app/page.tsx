@@ -8,25 +8,45 @@ import { emphasisFont } from "@/src/ui/fonts";
 export default function Page() {
   
   return (
-    <main className="flex-grow grid grid-cols-4 grid-rows-3 gap-4">
-      <HeroCard colSpan={2} rowSpan={2} className="p-2 flex flex-col justify-between">
-        <h2 className={`text-8xl font-bold ${emphasisFont.className} tracking-tighter`}>
+    <main className="lg:flex-grow flex flex-col md:grid md:grid-cols-2 md:grid-rows-4 lg:grid-cols-4 lg:grid-rows-3 gap-4">
+
+      <HeroCard 
+        className="flex flex-col xl:justify-between"
+        classNameLayout="col-span-2 lg:row-span-2 p-6"
+      >
+        <h2 className={`text-6xl md:text-7xl 2xl:text-8xl font-bold ${emphasisFont.className} tracking-tighter mb-4`}>
           La technologie au service du bien être animal
         </h2>
-        <p className="text-lg">
+        <p className="xl:text-lg text-md">
           Le collier CNL est un produit qui vise à répondre aux besoins des propriétaires sur la santé physique et mentale de leur animal de compagnie pendant leur absence. L’objectif est d’offrir aux propriétaires grâce à une technologie connectée et un suivi personnalisé, une solution innovante et évolutive  pour assurer le bien-être de leur animal. Le collier, connecté et doté d’une caméra intelligente permet une surveillance en temps réel de la santé et du comportement de leur animal.
         </p>
       </HeroCard>
-      <HeroCard colSpan={2} rowSpan={3} backgroundImage="/assets/product.jpg" className="flex justify-end items-end gap-4" animationDelay={0.2}>
+
+      <HeroCard 
+        backgroundImage="/assets/product.jpg"
+        className="flex flex-col md:flex-row lg:flex-col xl:flex-row justify-end items-end gap-4 min-h-96"
+        classNameLayout="col-span-2 row-span-2 lg:row-span-3"
+        animationDelay={0.2}
+      >
         <Button href="/produit" text="Notre produit" Icon={ArrowRightIcon} />
         <Button href="/contact" text="Contact" Icon={EnvelopeIcon} SecondaryIcon={EnvelopeOpenIcon} type="secondary"/>
       </HeroCard>
-      <HeroCard className="flex flex-col justify-end" backgroundImage="/assets/team.jpg" href="/equipe" animationDelay={0.4}>
+
+      <HeroCard 
+        backgroundImage="/assets/team.jpg" href="/equipe" animationDelay={0.4}
+        className="flex flex-col justify-end min-h-48"
+        classNameLayout="col-span-1 row-span-1"
+      >
         <h2 className={`text-6xl font-bold ${emphasisFont.className} relative z-10 text-white`}>
           #team
         </h2>
       </HeroCard>
-      <HeroCard className="flex flex-col justify-end" backgroundImage="/assets/green.jpg" href="/valeurs" animationDelay={0.6}>
+
+      <HeroCard 
+        backgroundImage="/assets/green.jpg" href="/valeurs" animationDelay={0.6}
+        className="flex flex-col justify-end min-h-48"
+        classNameLayout="col-span-1 row-span-1"
+      >
         <h2 className={`text-6xl font-bold ${emphasisFont.className} relative z-10 text-white`}>
           #green
         </h2>

@@ -59,7 +59,7 @@ export default function Nav() {
 				className={clsx(
 					emphasisFont.className,
 					"uppercase font-semibold text-2xl flex tracking-lighter",
-					"xl:flex xl:static xl:top-0 xl:left-0 xl:w-auto xl:bg-transparent xl:flex-row xl:py-0 xl:items-center xl:justify-center xl:mt-0 xl:border-none xl:h-full w-full",
+					"xl:flex xl:static xl:top-0 xl:left-0 xl:w-auto xl:bg-transparent xl:flex-row xl:py-0 xl:items-center xl:justify-center xl:mt-0 xl:border-none xl:h-full w-[calc(100vw-2rem)] -translate-x-[2px]",
 					menuOpen 
 						? 'absolute top-20 left-0 bg-white flex-col items-center z-10 border-2 border-gray-300 rounded-3xl mt-3 py-4' 
 						: 'hidden'

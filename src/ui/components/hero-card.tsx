@@ -5,8 +5,7 @@ import * as motion from "motion/react-client";
 
 interface HeroCardProps {
 	className?: string;
-	colSpan?: number;
-	rowSpan?: number;
+	classNameLayout?: string;
 	backgroundImage?: string;
 	animationDelay?: number;
 	href?: string;
@@ -16,8 +15,7 @@ interface HeroCardProps {
 export default function HeroCard(
 	{ 
 		className,
-		colSpan = 1,
-		rowSpan = 1,
+		classNameLayout,
 		backgroundImage,
 		href,
 		animationDelay = 0,
@@ -42,7 +40,7 @@ export default function HeroCard(
 			}
 			<div className={clsx(
 				className,
-				"relative z-10 h-full pointer-events-none"
+				"relative z-5 h-full pointer-events-none"
 			)}>
 				{children}
 			</div>
@@ -56,8 +54,7 @@ export default function HeroCard(
 			transition={{ delay: animationDelay, duration: 1 }}
 			className={clsx(
 				"bg-fuchsia-50 p-4 rounded-3xl relative overflow-hidden", 
-				`col-span-${colSpan}`, 
-				`row-span-${rowSpan}`
+				classNameLayout
 			)}
 		>
 			{href ?

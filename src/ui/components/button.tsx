@@ -1,5 +1,4 @@
 import Link from "next/link";
-import * as motion from "motion/react-client";
 
 import { emphasisFont } from "@/src/ui/fonts";
 import clsx from "clsx";
