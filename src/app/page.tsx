@@ -9,7 +9,7 @@ export default function Page() {
   
   return (
     <main className="flex-grow grid grid-cols-4 grid-rows-3 gap-4">
-      <HeroCard colSpan={2} rowSpan={2} className="p-6 flex flex-col justify-between">
+      <HeroCard colSpan={2} rowSpan={2} className="p-2 flex flex-col justify-between">
         <h2 className={`text-8xl font-bold ${emphasisFont.className} tracking-tighter`}>
           La technologie au service du bien être animal
         </h2>
@@ -17,16 +17,16 @@ export default function Page() {
           Le collier CNL est un produit qui vise à répondre aux besoins des propriétaires sur la santé physique et mentale de leur animal de compagnie pendant leur absence. L’objectif est d’offrir aux propriétaires grâce à une technologie connectée et un suivi personnalisé, une solution innovante et évolutive  pour assurer le bien-être de leur animal. Le collier, connecté et doté d’une caméra intelligente permet une surveillance en temps réel de la santé et du comportement de leur animal.
         </p>
       </HeroCard>
-      <HeroCard colSpan={2} rowSpan={3} backgroundImage="/assets/product.jpg" className="flex justify-end items-end gap-4">
+      <HeroCard colSpan={2} rowSpan={3} backgroundImage="/assets/product.jpg" className="flex justify-end items-end gap-4" animationDelay={0.2}>
         <Button href="/produit" text="Notre produit" Icon={ArrowRightIcon} />
         <Button href="/contact" text="Contact" Icon={EnvelopeIcon} type="secondary"/>
       </HeroCard>
-      <HeroCard className="flex flex-col justify-end" backgroundImage="/assets/team.jpg" href="/equipe">
+      <HeroCard className="flex flex-col justify-end" backgroundImage="/assets/team.jpg" href="/equipe" animationDelay={0.4}>
         <h2 className={`text-6xl font-bold ${emphasisFont.className} relative z-10 text-white`}>
           #team
         </h2>
       </HeroCard>
-      <HeroCard className="flex flex-col justify-end" backgroundImage="/assets/green.jpg" href="/valeurs">
+      <HeroCard className="flex flex-col justify-end" backgroundImage="/assets/green.jpg" href="/valeurs" animationDelay={0.6}>
         <h2 className={`text-6xl font-bold ${emphasisFont.className} relative z-10 text-white`}>
           #green
         </h2>

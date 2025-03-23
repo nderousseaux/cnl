@@ -23,7 +23,7 @@ export default function Button(
 		<Link href={href} 
 			className={clsx(
 				className,
-				"w-80 h-14 rounded-full flex items-center justify-between border-2 pl-4",
+				"w-80 h-14 rounded-full flex items-center justify-between border-2 pl-4 pointer-events-auto",
 				type === "primary" ? 
 				"text-black bg-white border-black" :
 				"bg-black bg-opacity-40 text-white border-white p-1"
