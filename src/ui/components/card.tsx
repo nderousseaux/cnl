@@ -46,30 +46,38 @@ export default function Card({ id, className, title, image, description }: CardP
 			ref={cardRef}
 			className={clsx(
 				className,
-				"flex gap-10 transition-opacity duration-500",
-				id % 2 !== 0 ? "flex-row-reverse" : "",
+				"flex flex-col md:flex-row gap-6 md:gap-10 transition-opacity duration-500 items-center justify-center w-full",
+				id % 2 !== 0 ? "md:flex-row-reverse flex-col" : "",
 				isVisible ? "opacity-100" : "opacity-0"
 			)}
 		>
-			{/* Image at the left */}
-			<div className="relative w-full h-96 rounded-3xl overflow-hidden">
+			<div className="relative w-full md:w-1/3 h-96 overflow-hidden rounded-3xl">
 				<motion.div
-					className="absolute rounded-3xl overflow-hidden h-96 w-full"
+					className="absolute inset-0 overflow-hidden rounded-3xl"
 					whileHover={{ scale: 1.15, transition: { type: "spring" } }}
 					initial={{ scale: 1.05 }}
 				>
+				
 					<Image
 						src={image}
 						alt={title}
+						className="rounded-3xl object-cover filter"
 						layout="fill"
-						className="rounded-3xl"
 					/>
+
 				</motion.div>
 			</div>
-			{/* Text at the right */}
-			<div className="flex flex-col gap-6 text-left justify-center">
-				<h3 className={`text-4xl font-bold ${emphasisFont.className}`}>{title}</h3>
-				<p className="text-xl">{description}</p>
+			<div className="flex flex-col gap-6 text-left text-xl justify-center p-4 md:w-1/2 w-full">
+				<h2
+					className={clsx(
+						"text-3xl md:text-4xl 2xl:text-5xl font-bold",
+						emphasisFont.className,
+						"tracking-tighter"
+					)}
+				>
+					{title}
+				</h2>
+				<p className="text-lg">{description}</p>
 			</div>
 		</div>
 	);

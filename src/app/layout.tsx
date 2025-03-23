@@ -9,7 +9,7 @@ export default function RootLayout({children}: { children: React.ReactNode; }) {
 
   return (
     <html>
-      <body className={`${primaryFont.className} antialiased px-4 pt-4 min-h-screen flex flex-col gap-4`}>
+      <body className={`${primaryFont.className} antialiased p-4 min-h-screen flex flex-col gap-4`}>
         <Nav />
         {children}
         <Footer/>
