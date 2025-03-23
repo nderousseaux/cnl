@@ -28,7 +28,8 @@ export default function HeroCard(
 		<>
 			{backgroundImage && 
 				<motion.div className="absolute inset-0 overflow-hidden rounded-3xl"
-					whileHover={{ scale: 1.1, transition: { type: "spring" } }}
+					whileHover={{ scale: 1.15, transition: { type: "spring" } }}
+					initial={{ scale: 1.05 }}
 					>
 					<Image
 						src={backgroundImage}

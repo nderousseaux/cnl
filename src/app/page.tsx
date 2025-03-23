@@ -1,4 +1,4 @@
-import { ArrowRightIcon, EnvelopeIcon } from "@heroicons/react/24/outline";
+import { ArrowRightIcon, EnvelopeIcon, EnvelopeOpenIcon} from "@heroicons/react/24/outline";
 
 import HeroCard from "@/src/ui/components/hero-card";
 import Button from "@/src/ui/components/button";
@@ -19,7 +19,7 @@ export default function Page() {
       </HeroCard>
       <HeroCard colSpan={2} rowSpan={3} backgroundImage="/assets/product.jpg" className="flex justify-end items-end gap-4" animationDelay={0.2}>
         <Button href="/produit" text="Notre produit" Icon={ArrowRightIcon} />
-        <Button href="/contact" text="Contact" Icon={EnvelopeIcon} type="secondary"/>
+        <Button href="/contact" text="Contact" Icon={EnvelopeIcon} SecondaryIcon={EnvelopeOpenIcon} type="secondary"/>
       </HeroCard>
       <HeroCard className="flex flex-col justify-end" backgroundImage="/assets/team.jpg" href="/equipe" animationDelay={0.4}>
         <h2 className={`text-6xl font-bold ${emphasisFont.className} relative z-10 text-white`}>
