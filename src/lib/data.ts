@@ -1,16 +1,9 @@
-interface Product {
-	title: string;
-	image: string;
-	description: string;
-}
+import React from "react";
 
-interface TeamMember {
-	name: string;
-	poste: string;
-	image: string;
-}
+import { ArrowRightIcon, EnvelopeIcon, GlobeAltIcon, ShieldCheckIcon, ChartBarIcon, ArchiveBoxArrowDownIcon } from '@heroicons/react/24/outline';
 
-export const arguments_product : Product[] = [
+
+export const arguments_product : { title: string; image: string; description: string }[] = [
 	{
 		title: "Un collier à la pointe de la technologie",
 		image: "/assets/collar.jpg",
@@ -28,7 +21,7 @@ export const arguments_product : Product[] = [
 	}
 ]
 
-export const team: TeamMember[] = [
+export const team: { name: string; poste: string; image: string }[] = [
 	{
 		name: "Nohann",
 		poste: "Directeur",
@@ -78,5 +71,39 @@ export const team: TeamMember[] = [
 		name: "Louisa",
 		poste: "Électronique",
 		image: "/assets/team/9.jpeg",
+	}
+]
+
+
+export const values: { title: string; description: string; icon: JSX.Element }[] = [
+	{
+		icon: React.createElement(ShieldCheckIcon, { className: "w-10 h-10" }),
+		title: "Bien être animal",
+		description: "Nous plaçons le bien-être de l'animal au coeur de chaque décision et de chaque produit que nous développons."
+	},
+	{
+		icon: React.createElement(GlobeAltIcon, { className: "w-10 h-10" }),
+		title: "Made in France",
+		description: "Nous sommes fiers de concevoir et de fabriquer nos produits 100% en France, dans le respect des normes les plus strictes."
+	},
+	{
+		icon: React.createElement(ChartBarIcon, { className: "w-10 h-10" }),
+		title: "Qualité sans compromis",
+		description: "Nous ne faisons jamais de compromis sur la qualité, la durabilité et la sécurité de nos produits."
+	},
+	{
+		icon: React.createElement(EnvelopeIcon, { className: "w-10 h-10" }),
+		title: "Transparence totale",
+		description: "Nous croyons à une communication honnête et transparente avec nos clients, nos partenaires et nos employés."
+	},
+	{
+		icon: React.createElement(ArrowRightIcon, { className: "w-10 h-10" }),
+		title: "Bilan carbone neutre",
+		description: "Nous nous engageons à réduire notre empreinte carbone et à compenser les émissions de CO2 de nos activités."
+	},
+	{
+		icon: React.createElement(ArchiveBoxArrowDownIcon, { className: "w-10 h-10" }),
+		title: "Accessibilité pour tous",
+		description: "Nous nous efforçons de rendre nos produits accessibles au plus grand nombre de propriétaires d'animaux."
 	}
 ]

@@ -1,5 +1,3 @@
-import Image from 'next/image';
-
 import HeroCard from '@/src/ui/components/hero-card';
 import { team } from '@/src/lib/data';
 import { emphasisFont } from '@/src/ui/fonts';
