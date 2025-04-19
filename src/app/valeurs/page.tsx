@@ -29,7 +29,7 @@ export default function Page() {
 
       {values.map((valeur, index) => (
         <HeroCard
-          className="flex flex-col justify-center items-center"
+          className="flex flex-col justify-center items-center" animationDelay={0.2 + index * 0.2}
           classNameLayout="bg-gray-200 col-span-1 row-span-1"
           key={index}
         >
@@ -48,7 +48,7 @@ export default function Page() {
       ))}
 
       <HeroCard
-        className="flex justify-between flex-col xl:flex-row"
+        className="flex justify-between flex-col xl:flex-row" animationDelay={0.2 + values.length * 0.2}
         classNameLayout="xl:col-span-3 lg:col-span-2 col-span-1 bg-gray-100 p-6 rounded-3xl justify-between gap-40 bg-fuchsia-100"
       >
         <div className="flex flex-col gap-4 text-left text-xl pb-4 pr-24">
