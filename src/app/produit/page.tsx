@@ -42,7 +42,7 @@ export default function Page() {
           </div>
           {/* Right part, the title, desc, and price */}
           <motion.div
-            className="flex flex-col gap-10 text-left text-lg xl:text-xl justify-between pb-4 align-bottom col-span-1 p-4"
+            className="flex flex-col gap-10 text-left text-md xl:text-lg justify-between pb-4 align-bottom col-span-1 p-4"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
