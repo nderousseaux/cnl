@@ -82,7 +82,7 @@ export default function Page() {
                 <li> Alertes en cas de problème</li>
               </ul>
             </div>
-            <Button href="/buy" text="Acheter" Icon={ShoppingBagIcon} />
+            <Button text="Acheter" Icon={ShoppingBagIcon} />
           </motion.div>
         </section>
         <motion.section className="flex flex-col gap-10 lg:mx-28 mb-10"

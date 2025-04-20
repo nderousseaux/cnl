@@ -1,3 +1,5 @@
+"use client";
+
 import * as motion from "motion/react-client";
 
 import { contact } from '@/src/lib/data';
@@ -25,9 +27,12 @@ export default function Page() {
           En plus, on ne mort pas !
         </p>
           
-        <form className="gap-4 grid
-          grid-cols-2
-        ">
+        <form className="gap-4 grid grid-cols-2"
+          onSubmit={(e) => {
+            e.preventDefault();
+            alert('Ce site est juste un prototype, et la démo s\'arrête ici.');
+          }}          
+        >
           <input type="text" placeholder="Nom" className="p-4 rounded-3xl w-full col-span-2 xl:col-span-1 h-20" />
           <input type="email" placeholder="Email" className="p-4 rounded-3xl w-full col-span-2 xl:col-span-1 h-20" />
           <input type="text" placeholder="Sujet" className="p-4 rounded-3xl w-full col-span-2 h-20" />

@@ -1,3 +1,5 @@
+'use client';
+
 import { ArrowRightIcon } from '@heroicons/react/24/outline';
 
 import Button from '@/src/ui/components/button';
@@ -60,7 +62,7 @@ export default function Page() {
             Notre équipe participe régulièrment à des actions de bénévolat dans des refuges et des centres de sauvetage d&apos;animaux. C&apos;est notre façon de rester connectés à notre mission première : améliorer la vie des animaux.
           </p>
           <div className="h-full"/>
-          <Button href="/" text="Nos actions" Icon={ArrowRightIcon}/>
+          <Button text="Nos actions" Icon={ArrowRightIcon}/>
         </div>
         <HeroCard
           backgroundImage="/assets/ecology.jpg"

@@ -9,7 +9,7 @@ interface ButtonProps {
 	SecondaryIcon?: React.ElementType;
 	type?: "primary" | "secondary";
 	className?: string;
-	href: string;
+	href?: string | null;
 }
 
 export default function Button(
@@ -18,11 +18,23 @@ export default function Button(
 		SecondaryIcon = Icon,
 		type = "primary",
 		className,
-		href 
+		href = null, 
 	}: ButtonProps) {
 
+	const handleClick = () => {
+		if (!href) {
+			alert("Ce site est juste un prototype, et la démo s'arrête ici.");
+		}
+	};
+
+	const Component = href ? Link : "button";
+	const componentProps = href
+		? { href }
+		: { onClick: handleClick };
+
 	return (
-		<Link href={href} 
+		<Component
+			{...componentProps}
 			className={clsx(
 				className,
 				"group w-80 h-14 rounded-full flex items-center justify-between border-2 pl-4 pointer-events-auto",
@@ -56,6 +68,6 @@ export default function Button(
 						"group-hover:translate-x-[3.65rem]",
 					)}/>
 			</div>
-		</Link>
-	)
+		</Component>
+	);
 }
