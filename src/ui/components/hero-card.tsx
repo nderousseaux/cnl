@@ -31,7 +31,7 @@ export default function HeroCard(
 					>
 					<Image
 						src={backgroundImage}
-						alt=""
+						alt="Background Image"
 						layout="fill"
 						objectFit="cover"
 						objectPosition="center"
