@@ -11,7 +11,7 @@ export default function Page() {
     <main className="flex flex-col md:grid md:grid-cols-2 md:grid-rows-4 lg:grid-cols-4 lg:grid-rows-3 gap-4 flex-grow min-h-[calc(100vh-8rem)]">
 
       <HeroCard 
-        className="flex flex-col xl:justify-between"
+        className="flex flex-col justify-between"
         classNameLayout="col-span-2 lg:row-span-2 p-6"
       >
         <h2 className={`text-6xl md:text-7xl 2xl:text-8xl font-bold ${emphasisFont.className} tracking-tighter mb-4`}>

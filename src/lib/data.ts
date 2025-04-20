@@ -107,3 +107,21 @@ export const values: { title: string; description: string; icon: JSX.Element }[]
 		description: "Nous nous efforçons de rendre nos produits accessibles au plus grand nombre de propriétaires d'animaux."
 	}
 ]
+
+export const contact: { title: string; description: string; icon: JSX.Element }[] = [
+	{
+		icon: React.createElement(ArchiveBoxArrowDownIcon, { className: "w-10 h-10" }),
+		title: "Chat en direct",
+		description: "Notre équipe est disponible en ligne du lundi au vendredi de 9h à 18h pour répondre à toutes vos questions."
+	},
+	{
+		icon: React.createElement(EnvelopeIcon, { className: "w-10 h-10" }),
+		title: "Email",
+		description: "Envoyez nous un email à l'adresse suivante : <a href='mailto:nohann.derousseauxlebert@gmail.com' className='underline'> nohann.derousseauxlebert@gmail.com </a>"
+	},
+	{
+		icon: React.createElement(ArrowRightIcon, { className: "w-10 h-10" }),
+		title: "Addresse",
+		description: "12 rue de la Bouloie 25000 Besançon, France"
+	}
+]

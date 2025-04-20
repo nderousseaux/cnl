@@ -1,59 +1,62 @@
+import * as motion from "motion/react-client";
+
+import { contact } from '@/src/lib/data';
 import { emphasisFont } from '@/src/ui/fonts';
-import { ArrowRightIcon, EnvelopeIcon, ArchiveBoxArrowDownIcon } from '@heroicons/react/24/outline';
 
 export default function Page() {
   return (
-    <main className="flex justify-center font-sans">
-      <div className="w-full flex flex-col">
-        <section className="col-span-2 row-span-2 bg-gray-100 p-6 rounded-3xl flex flex-col justify-between mb-4">
-          <h2 className={`text-7xl font-bold ${emphasisFont.className} tracking-tighter mb-4`}>Nous contacter</h2>
+    <main className="flex flex-col justify-center font-sans gap-4">
+
+      {/* First, contact page */}
+      <motion.section className="flex flex-col justify-between w-full bg-fuchsia-200 p-4 rounded-3xl gap-4"
+        initial={{ opacity: 0, y: 10 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 1 }}
+      >
+        <h2 className={`text-6xl md:text-7xl 2xl:text-8xl font-bold ${emphasisFont.className} tracking-tighter mb-4`}>
+          Nous contacter
+        </h2>
+
+        <p className="text-lg">
+          Vous avez une question, une suggestion ou un commentaire ? N&apos;hésitez pas à nous contacter ! Nous sommes là pour vous aider et nous serions ravis d&apos;avoir de vos nouvelles. Remplissez le formulaire ci-dessous et nous vous répondrons dans les plus brefs délais.
+        </p>
+
+        <p className="text-lg mb-2">
+          En plus, on ne mort pas !
+        </p>
           
-          <form className="flex flex-col gap-4">
-            <input type="text" placeholder="Nom" className="p-4 rounded-3xl w-full" />
-            <input type="email" placeholder="Email" className="p-4 rounded-3xl w-full" />
-            <input type="text" placeholder="Sujet" className="p-4 rounded-3xl w-full" />
-            <textarea placeholder="Message" className="p-4 rounded-3xl w-82" />
-            <button type="submit" className="bg-black text-white p-4 rounded-3xl w-full">Envoyer</button>
-          </form>
-        </section>
-        <section className="col-span-2 row-span-2 bg-gray-100 p-6 rounded-3xl flex justify-between mb-4 gap-4">
-          <section className="flex-1 bg-gray-200 p-4 py-6 rounded-3xl relative flex flex-col items-center gap-2">
+        <form className="gap-4 grid
+          grid-cols-2
+        ">
+          <input type="text" placeholder="Nom" className="p-4 rounded-3xl w-full col-span-2 xl:col-span-1 h-20" />
+          <input type="email" placeholder="Email" className="p-4 rounded-3xl w-full col-span-2 xl:col-span-1 h-20" />
+          <input type="text" placeholder="Sujet" className="p-4 rounded-3xl w-full col-span-2 h-20" />
+          <textarea placeholder="Message" className="p-4 rounded-3xl col-span-2 h-80" />
+          <button type="submit" className="bg-black text-white p-4 rounded-3xl w-full col-span-2">Envoyer</button>
+        </form>
+
+      </motion.section>      
+
+      {/* Then, three sections with contact information */}
+      <motion.section className="flex xl:flex-row flex-col justify-between w-full p-4 rounded-3xl bg-gray-300 gap-4"
+        initial={{ opacity: 0, y: 10 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 1, delay: 0.5 }} 
+      >
+        {contact.map((item, index) => (
+          <section key={index} className="flex-1 bg-gray-100 p-4 py-6 rounded-3xl relative flex flex-col items-center gap-2">
             <div className="flex items-center justify-center w-20 h-20 bg-gray-300 rounded-full">
-              <ArchiveBoxArrowDownIcon className="w-10 h-10" />
+              {item.icon}
             </div>
             <h2 className={`text-3xl font-bold ${emphasisFont.className} mt-4`}>
-              Chat en direct
+              {item.title}
             </h2>
             <p className="text-lg text-center">
-              Notre équipe est disponible en ligne du lundi au vendredi de 9h à 18h pour répondre à toutes vos questions.
+              <span dangerouslySetInnerHTML={{ __html: item.description }} />
             </p>
           </section>
-          <section className="flex-1 bg-gray-200 p-4 py-6 rounded-3xl relative flex flex-col items-center gap-2">
-            <div className="flex items-center justify-center w-20 h-20 bg-gray-300 rounded-full">
-              <EnvelopeIcon className="w-10 h-10" />
-            </div>
-            <h2 className={`text-3xl font-bold ${emphasisFont.className} mt-4`}>
-              Email
-            </h2>
-            <p className="text-lg text-center">
-              Envoyez nous un email à l&apos;adresse suivante : <a href="mailto:nohann.derousseauxlebert@gmail.com" className="underline">
-              nohann.derousseauxlebert@gmail.com
-              </a> 
-            </p>
-          </section>
-          <section className="flex-1 bg-gray-200 p-4 py-6 rounded-3xl relative flex flex-col items-center gap-2">
-            <div className="flex items-center justify-center w-20 h-20 bg-gray-300 rounded-full">
-              <ArrowRightIcon className="w-10 h-10" />
-            </div>
-            <h2 className={`text-3xl font-bold ${emphasisFont.className} mt-4`}>
-              Addresse
-            </h2>
-            <p className="text-lg text-center">
-              12 rue de la Bouloie 25000 Besançon, France
-            </p>
-          </section>
-        </section>
-      </div>
+        ))}
+      </motion.section>
     </main>
   );
 }

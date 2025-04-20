@@ -19,7 +19,7 @@ export default function Page() {
         className="flex flex-col justify-between"
         classNameLayout="xl:col-span-3 lg:col-span-2 col-span-1"
       >
-        <h2 className={`text-7xl font-bold ${emphasisFont.className} tracking-tighter mb-4`}>
+        <h2 className={`text-6xl md:text-7xl 2xl:text-8xl font-bold ${emphasisFont.className} tracking-tighter mb-4`}>
           Nos valeurs
         </h2>
         <p className="text-lg">
