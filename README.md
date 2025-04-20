@@ -74,6 +74,6 @@ Or simply push to the main branch, if you have the vercel integration enabled.
 	<img src="docs/team.png" alt="Team" height="250"/>
 	<img src="docs/values.png" alt="Values" height="250"/>
 	<img src="docs/contact.png" alt="Contact" height="250"/>
-	<img src="docs/mobile-menu-png" alt="Mobile menu" height="250"/>
+	<img src="docs/mobile-menu.png" alt="Mobile menu" height="250"/>
 	<img src="docs/mobile-contact.png" alt="Mobile product" height="250"/>
 </div>
