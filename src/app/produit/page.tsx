@@ -13,15 +13,45 @@ import Button from '@/src/ui/components/button';
 import { arguments_product } from '@/src/lib/data';
 import Card from '@/src/ui/components/card';
 
+function Model3d() {
+  const [showModel, setShowModel] = useState(false);
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setShowModel(true);
+    }, 1000);
+
+    return () => clearTimeout(timer);
+  }, []);
+
+  const modelRef = useRef<THREE.Group>(null!);
+
+  if (!showModel) return null;
+  return (
+    <Canvas camera={{ position: [-3, 2, 10] }}>
+      <ambientLight intensity={0.5} />
+      <Suspense fallback={<Html center>Patientez...</Html>}>
+        <Model ref={modelRef} position={[0, 1, 0]} />
+        <OrbitControls />
+        <Environment preset="sunset" />
+        <FrameHandler modelRef={modelRef} />
+      </Suspense>
+    </Canvas>
+  );
+}
+
 export default function Page() {
-  const modelRef = useRef<THREE.Group>(null);
 
   return (
     <main className="flex justify-center font-sans">
       <div className="flex flex-col gap-10 lg:gap-20">
         <section className="grid lg:grid-cols-2 gap-4 lg:gap-10 lg:mt-10">
           {/* Image at the left */}
-          <div className="col-span-1 flex justify-center items-center">
+          <motion.div className="col-span-1 flex justify-center items-center"
+            initial={{ opacity: 0, y: 10 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1 }} 
+          >
             <div className="relative min-h-96 max-h-[700px] w-full h-full overflow-hidden rounded-3xl">
               <Image
                 src="/assets/green.jpg"
@@ -29,23 +59,15 @@ export default function Page() {
                 className="rounded-3xl object-cover filter blur-lg"
                 layout="fill"
               />
-              <Canvas camera={{ position: [-3, 2, 10] }}>
-                <ambientLight intensity={0.5} />
-                <Suspense fallback={<Html center>Patientez...</Html>}>
-                  <Model ref={modelRef} position={[0, 1, 0]} />
-                  <OrbitControls />
-                  <Environment preset="sunset" />
-                 <FrameHandler modelRef={modelRef} />
-                </Suspense>
-              </Canvas>
+              <Model3d />
             </div>
-          </div>
+          </motion.div>
           {/* Right part, the title, desc, and price */}
           <motion.div
             className="flex flex-col gap-10 text-left text-md xl:text-lg justify-between pb-4 align-bottom col-span-1 p-4"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5 }}
+            transition={{ duration: 1, delay: 0.2 }}
           >
             <div className="flex flex-col gap-6">
               <h2 className={`text-5xl md:text-7xl 2xl:text-8xl font-bold ${emphasisFont.className} tracking-tighter`}>
@@ -63,7 +85,11 @@ export default function Page() {
             <Button href="/buy" text="Acheter" Icon={ShoppingBagIcon} />
           </motion.div>
         </section>
-        <section className="flex flex-col gap-10 lg:mx-28 mb-10">
+        <motion.section className="flex flex-col gap-10 lg:mx-28 mb-10"
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1, delay: 0.4 }}  
+        >
           <h2 className={`text-4xl sm:text-5xl md:text-6xl 2xl:text-6xl font-bold ${emphasisFont.className} tracking-tighter text-center`}>
             Pourquoi choisir le collier CNL ?
           </h2>
@@ -72,7 +98,7 @@ export default function Page() {
               <Card key={index} id={index} {...item} />
             ))}
           </div>
-        </section>
+        </motion.section>
       </div>
     </main>
   );
